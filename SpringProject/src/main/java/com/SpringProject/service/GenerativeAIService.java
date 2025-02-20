@@ -49,4 +49,10 @@ public class GenerativeAIService {
         }
         return "No response from AI model. API Key: " + apiKey;
     }
+
+    //get, put, delete
 }
+
+
+
+// userid, projectid, prompt, response, progress, is_deleted=false, created_at, updated_at,
