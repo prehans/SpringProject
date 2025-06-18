@@ -43,6 +43,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import { login } from './feature/userSlice.jsx'; // Adjust the import path as necessary
+import { RegisterPage } from './components/RegisterPage.jsx';
 function App() {
   const user = useSelector(selectUser);
   console.log("User in App:", user);
@@ -74,6 +75,7 @@ function App() {
       <Routes>
         <Route path="/" element={user ? <Navigate to="/home" /> : <LoginPage />} />
         <Route path="/home" element={user ? <HomePage /> : <Navigate to="/" />} />
+        <Route path="/register" element={<RegisterPage/>}/>
       </Routes>
     </Router>
   )
